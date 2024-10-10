@@ -1,46 +1,86 @@
-# Budget Management App
+# Planifio - Application de Gestion de Budget Personnalisée
 
-## Instructions pour exporter et exécuter le projet localement
+## Description
 
-1. Téléchargement du code source :
-   - Créez un nouveau dossier sur votre PC pour le projet.
-   - Téléchargez tous les fichiers du projet dans ce dossier.
+**Planifio** est une application de gestion de budget moderne et responsive, conçue pour aider les utilisateurs à suivre leurs dépenses, créer des budgets personnalisés et visualiser leurs données financières.
 
-2. Installation des dépendances :
-   - Ouvrez un terminal ou une invite de commande.
-   - Naviguez jusqu'au dossier du projet.
-   - Exécutez la commande suivante pour installer les dépendances :
-     ```
-     npm install
-     ```
+## Fonctionnalités Principales
 
-3. Lancement du projet :
-   - Une fois les dépendances installées, lancez le projet avec la commande :
-     ```
-     npm run dev
-     ```
-   - Ouvrez votre navigateur et accédez à l'URL indiquée dans le terminal (généralement http://localhost:5173).
+### Interface Utilisateur
+- Utilisation de **React** avec **Material-UI** pour une interface utilisateur moderne.
+- **Framer Motion** pour des animations fluides et agréables.
 
-## Structure du projet
+### Authentification
+- Intégration avec **Firebase** pour l'inscription, la connexion et la déconnexion des utilisateurs.
 
-- `src/` : Contient les fichiers source du projet
-  - `components/` : Composants React
-  - `utils/` : Fonctions utilitaires
-- `public/` : Fichiers statiques
-- `package.json` : Configuration du projet et dépendances
+### Création de Budgets
+- Création de plusieurs budgets, chacun ayant un nom, une limite de dépenses et une devise associée au pays sélectionné.
 
-## Technologies utilisées
+### Gestion des Dépenses
+- Ajout de dépenses à chaque budget, avec un nom, un montant, une catégorie et une date.
+- Calcul automatique des taxes en fonction du pays.
 
-- React
-- Vite
-- Material-UI
-- Framer Motion
+### Catégorisation
+- Les dépenses peuvent être catégorisées pour un suivi plus efficace.
+- Possibilité d'ajouter de nouvelles catégories.
 
-## Fonctionnalités
+### Visualisation des Données
+- Graphique circulaire pour visualiser la répartition des dépenses par catégorie.
+- Historique détaillé des dépenses sous forme de tableau.
 
-- Création et gestion de budgets
-- Ajout et suivi des dépenses
-- Visualisation des dépenses par catégorie
-- Génération d'identifiants uniques pour les budgets
+### Suivi du Budget
+- Calcul et affichage du budget restant.
+- Barre de progression colorée pour indiquer visuellement l'état du budget.
 
-Pour toute question ou problème, n'hésitez pas à créer une issue dans le dépôt du projet.
+### Persistance des Données
+- Stockage des données dans l'URL pour permettre le partage et la sauvegarde.
+
+### Importation/Exportation
+- Exportation des données de budget au format JSON.
+- Importation de budgets à partir de fichiers JSON.
+
+### Identifiants Uniques
+- Chaque budget a un identifiant unique généré à partir de ses données.
+
+### Multi-devises
+- Support des devises multiples (USD, GBP, CAD, EUR) selon le pays sélectionné.
+
+### Responsive Design
+- L'application s'adapte à toutes les tailles d'écran (desktop et mobile).
+
+## Technologies Utilisées
+- **React**
+- **Material-UI**
+- **Framer Motion**
+- **Recharts**
+
+## Installation
+
+1. Clonez ce dépôt :
+   ```bash
+   git clone https://github.com/Haitaroo/Planifio.git
+   ```
+2. Installez les dépendances :
+   ```bash
+   npm install
+   ```
+3. Démarrez l'application en mode développement :
+   ```bash
+   npm run dev
+   ```
+
+## Déploiement
+
+Pour déployer l'application sur GitHub Pages, utilisez les commandes suivantes :
+   ```bash
+   npm run build
+   npm run deploy
+   ```
+
+## Contribuer
+
+Les contributions sont les bienvenues ! Ouvrez une issue ou soumettez une pull request.
+
+## Licence
+
+Ce projet est sous licence MIT.
