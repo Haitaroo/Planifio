@@ -10,8 +10,6 @@
 - Utilisation de **React** avec **Material-UI** pour une interface utilisateur moderne.
 - **Framer Motion** pour des animations fluides et agréables.
 
-### Authentification
-- Intégration avec **Firebase** pour l'inscription, la connexion et la déconnexion des utilisateurs.
 
 ### Création de Budgets
 - Création de plusieurs budgets, chacun ayant un nom, une limite de dépenses et une devise associée au pays sélectionné.
