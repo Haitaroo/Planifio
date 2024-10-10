@@ -159,32 +159,34 @@ export default function BudgetDashboard() {
             >
               🚀 Créer un Nouveau Budget
             </Button>
-            <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                Récupérer un Budget Existant
-              </Typography>
-              <form onSubmit={handleRetrieveBudget}>
-                <TextField
-                  fullWidth
-                  label="Données du Budget (format JSON)"
-                  variant="outlined"
-                  value={retrieveBudgetString}
-                  onChange={(e) => setRetrieveBudgetString(e.target.value)}
-                  required
-                  margin="normal"
-                  multiline
-                  rows={4}
-                />
-                <Button type="submit" variant="contained" color="secondary" fullWidth>
-                  Récupérer le Budget
-                </Button>
-              </form>
-              {retrieveError && (
-                <Typography color="error" variant="body2" sx={{ mt: 1 }}>
-                  {retrieveError}
+            {!showBudgetForm && budgets.length === 0 && (
+              <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
+                <Typography variant="h6" gutterBottom>
+                  Récupérer un Budget Existant
                 </Typography>
-              )}
-            </Paper>
+                <form onSubmit={handleRetrieveBudget}>
+                  <TextField
+                    fullWidth
+                    label="Données du Budget (format JSON)"
+                    variant="outlined"
+                    value={retrieveBudgetString}
+                    onChange={(e) => setRetrieveBudgetString(e.target.value)}
+                    required
+                    margin="normal"
+                    multiline
+                    rows={4}
+                  />
+                  <Button type="submit" variant="contained" color="secondary" fullWidth>
+                    Récupérer le Budget
+                  </Button>
+                </form>
+                {retrieveError && (
+                  <Typography color="error" variant="body2" sx={{ mt: 1 }}>
+                    {retrieveError}
+                  </Typography>
+                )}
+              </Paper>
+            )}
           </motion.div>
         )}
       </Box>
