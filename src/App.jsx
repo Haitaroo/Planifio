@@ -5,7 +5,7 @@ import './styles/custom.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Planifio">
       <Routes>
         <Route path="/" element={<BudgetDashboard />} />
       </Routes>
